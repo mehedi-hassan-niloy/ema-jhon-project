@@ -4,6 +4,7 @@ import logo from '../../../images/Logo.svg';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import Banner from '../Home/Home/Banner';
 
 const Header = () => {
 
@@ -19,7 +20,8 @@ const Header = () => {
         <div className='header'>
            <img src={logo} alt="" />
             <nav>
-              <Link to ="/">Shop</Link>
+              <Link to ="/">Home</Link>
+              <Link to ="/shop">Shop</Link>
               <Link to ="/orders">Order</Link>
               <Link to ="/inventory">Inventory</Link>
               <Link to ="/login">Login</Link>

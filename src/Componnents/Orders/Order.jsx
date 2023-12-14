@@ -5,6 +5,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import ReviewItem from '../Review-Item/ReviewItem';
 import './Order.css'
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
+import Footer from '../Header/Home/Footer/Footer';
 
 const Order = () => {
     const saveCart = useLoaderData();
@@ -19,7 +20,8 @@ const Order = () => {
         deleteShoppingCart();
     }
     return (
-        <div className='shop-container'>
+      <div>
+          <div className='shop-container'>
             <div className='review-container'>
             {
                 cart.map(product =><ReviewItem
@@ -41,6 +43,8 @@ const Order = () => {
             </div>
 
         </div>
+        <Footer></Footer>
+      </div>
     );
 };
 

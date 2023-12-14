@@ -8,20 +8,31 @@ const Product = (props) => {
     const handelAddToCart = props.handelAddToCart;
   
     return (
-        <div className='product'>
-            <img src={img} alt="" />
-           <div className="products-info">
-           <h6 className='product-name'>{name}</h6>
-            <p>Price: ${price}</p>
-            <p>Manufacturer : {seller}</p>
-            <p>Rating : {ratings} Stars</p>
-           </div>
-           <button onClick={() =>handelAddToCart(props.product)} className='btn-cart'>
-            Add to Cart
-            <FontAwesomeIcon icon={faShoppingCart} />
-            </button>
 
-        </div>
+        <div>
+         <button onClick={() =>handelAddToCart(props.product)}>
+
+       <div className='relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl'>
+
+      <img src={img} 
+          alt="" 
+          className='object-cover w-full h-56 md:h-64 xl:h-80'
+          />
+          <div className='absolute inset-0 flex flex-col px-6 py-4 text-gray-300 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100'>
+              <p>Name: {name}</p>
+              <br />
+              <p>Seller Name: {seller}</p>
+              <br />
+              <p className=''>Price:${price}</p>
+              <br />
+              <p className=''>Ratting: {ratings} Star</p>
+              <h4 className='mt-5'>Add to Cart
+            <FontAwesomeIcon icon={faShoppingCart} /></h4>
+          </div>
+       </div>
+
+         </button>
+      </div>
     );
 };
 

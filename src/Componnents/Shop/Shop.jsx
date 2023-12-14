@@ -4,6 +4,7 @@ import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 import { Link } from 'react-router-dom';
+import Footer from '../Header/Home/Footer/Footer';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -46,8 +47,9 @@ const Shop = () => {
        }
 
     return (
-        <div className='shop-container'>
-            <div className="products-container">
+<div>
+<div className=' mt-10 md:flex lg:flex gap-12'>
+            <div className="grid gap-6 mb-8 lg:grid-cols-3 sm:grid-cols-2">
             {
                 products.map(product => <Product
                 key={product.id}
@@ -66,6 +68,8 @@ const Shop = () => {
                </Link>
             </Cart>
         </div>
+        <Footer></Footer>
+</div>
     );
 };
 
