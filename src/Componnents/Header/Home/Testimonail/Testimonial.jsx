@@ -9,6 +9,9 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
+import {motion} from 'framer-motion'
+import {fadeIn} from '../../../../Variants'
+
 const Testimonial = () => {
     const [reviews, setReviews] = useState([]);
 
@@ -18,7 +21,12 @@ const Testimonial = () => {
             .then(data => setReviews(data))
     }, [])
     return (
-        <section className="my-20 md:mr-32 md:ml-32">
+        <motion.section 
+        variants={fadeIn("up", 0.2)}
+        initial= "hidden"
+        whileInView={"show"}
+        viewport={{once: false, amount: 0.7}}
+        className="my-20 md:mr-32 md:ml-32">
             <div className=''>
                 <h1 className='text-center text-3xl text-green-500 text-bold mb-6'>Coustomer Review</h1>
             </div>
@@ -55,7 +63,7 @@ const Testimonial = () => {
                     </SwiperSlide>)
                 }
             </Swiper>
-        </section>
+        </motion.section>
     );
 };
 

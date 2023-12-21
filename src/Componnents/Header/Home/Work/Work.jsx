@@ -5,9 +5,18 @@ import pic1 from "../../../../assets/icons8-us-dollar-circled-50.png"
 import pic2 from "../../../../assets/icons8-person-50.png"
 import pic3 from "../../../../assets/icons8-gift-box-50.png"
 
+import {motion} from 'framer-motion'
+import {fadeIn} from '../../../../Variants'
+
 const Work = () => {
     return (
-        <div className='mt-10'>
+        <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial= "hidden"
+        whileInView={"show"}
+        viewport={{once: false, amount: 0.7}}
+        
+        className='mt-10'>
             <div className='text-center mb-10'>
                 <h1 className='text-4xl text-bold'>How To Shop</h1>
             </div>
@@ -65,7 +74,7 @@ const Work = () => {
                     </div>
                 </Card>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

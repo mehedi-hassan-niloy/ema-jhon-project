@@ -4,12 +4,26 @@ import img1 from '../../../../assets/product1.png'
 import img2 from '../../../../assets/productcap.png'
 import img3 from '../../../../assets/productbag.jpg'
 
+import {motion} from 'framer-motion'
+import { fadeIn } from '../../../../Variants';
+
 const ProductAbout = () => {
 
     return (
-        <div className='mt-12 md:m-36'>
+        <motion.div 
+        variants={fadeIn("up", 0.2)}
+        initial= "hidden"
+        whileInView={"show"}
+        viewport={{once: false, amount: 0.7}}
+        
+        className='mt-12 md:m-36'>
             <div className='grid gap-20 mb-8 md:grid-cols-2'>
-                <div className='flex'>
+                <motion.div
+                variants={fadeIn("right", 0.2)}
+                initial= "hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.7}}
+                className='flex'>
                     <div>
                         <img className=' w-[500px] h-[250px]' src={img} alt="" />
                         <div className='flex'>
@@ -19,8 +33,14 @@ const ProductAbout = () => {
                     </div>
                     <img className='w-[150px] h-[500px]' src={img1} alt="" />
 
-                </div>
-                <div>
+                </motion.div>
+
+                <motion.div
+                variants={fadeIn("left", 0.2)}
+                initial= "hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.7}}
+                >
                     <div>
                         <h4 className='text-2xl text-extrabold text-green-500 tracking-widest'>THE PRODUCTS</h4>
                             <h1 className='text-5xl text-extrabold text-black mt-2 mb-6 tracking-widest'>All About Ema-Jhon</h1>
@@ -38,10 +58,10 @@ const ProductAbout = () => {
                         </div>
                     </ul>
                     <button className='btn bg-green-500 hover:bg-green-700 text-white'>Shop Now</button>
-                </div>
+                </motion.div>
             </div>
 
-        </div>
+        </motion.div>
     );
 };
 

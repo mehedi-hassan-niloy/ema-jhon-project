@@ -21,7 +21,7 @@ const Order = () => {
     }
     return (
       <div>
-          <div className='shop-container md:flex lg:flex'>
+          <div className='grid gap-6  lg:grid-cols-2 sm:grid-cols'>
             <div className='review-container'>
             {
                 cart.map(product =><ReviewItem
