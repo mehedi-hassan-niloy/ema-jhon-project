@@ -49,7 +49,7 @@ const Shop = () => {
     return (
 <div>
 <div className=' mt-10 md:flex lg:flex gap-12'>
-            <div className="grid gap-6 mb-8 lg:grid-cols-3 sm:grid-cols-2">
+            <div className="grid gap-6 mb-8 lg:grid-cols-3 sm:grid-cols-1">
             {
                 products.map(product => <Product
                 key={product.id}
@@ -64,7 +64,7 @@ const Shop = () => {
              handelClearCart = {handelClearCart}
             >
                <Link className='proceed-link' to={"/orders"}>
-                <button className='btn-proceed'>Review Order</button>
+                <button className='btn-proceed p-3 rounded bg-lime-500'>Review Order</button>
                </Link>
             </Cart>
         </div>

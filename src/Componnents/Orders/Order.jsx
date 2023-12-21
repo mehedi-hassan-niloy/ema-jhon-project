@@ -21,7 +21,7 @@ const Order = () => {
     }
     return (
       <div>
-          <div className='shop-container'>
+          <div className='shop-container md:flex lg:flex'>
             <div className='review-container'>
             {
                 cart.map(product =><ReviewItem
@@ -37,7 +37,7 @@ const Order = () => {
                 handelClearCart={handelClearCart}
                 >
                     <Link className='proceed-link'  to={"/checkout"}>
-                        <button className='btn-proceed'>Proceed Checkout</button>
+                        <button className='btn-proceed p-3 rounded bg-lime-500'>Proceed Checkout</button>
                     </Link>
                 </Cart>
             </div>

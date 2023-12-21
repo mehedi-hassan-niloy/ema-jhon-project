@@ -1,5 +1,4 @@
 .cart{
-    background-color: rgba(255, 153, 0, 0.3);
     height: 500px;
     width: 300px;
     padding: 25px;
@@ -16,9 +15,9 @@
     height: 56px;
     font-size: 21px;
     margin: 10px auto;
-    background: #FF3030;
     color: white;
      display: flex;
      justify-content: space-between;
      align-items: center;
+     
 }
