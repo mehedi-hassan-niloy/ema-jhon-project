@@ -20,7 +20,7 @@ const Testimonial = () => {
     return (
         <section className="my-20 md:mr-32 md:ml-32">
             <div className=''>
-                <h1 className='text-center text-3xl text-orange-500 text-bold mb-6'>Coustomer Review</h1>
+                <h1 className='text-center text-3xl text-green-500 text-bold mb-6'>Coustomer Review</h1>
             </div>
 
             <Swiper

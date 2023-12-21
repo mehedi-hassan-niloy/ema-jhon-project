@@ -19,7 +19,10 @@ const Product = () => {
   
     return (
         <div className='mt-10'>
-             <h1 className="text-center text-3xl text-bold mb-10">Product</h1>
+            <div className="mb-7">
+            <h1 className=" text-3xl text-bold mb-3">Product</h1>
+             <span className="w-20 h-1.5 bg-green-500 inline-block rounded-2xl flex justify-center items-center"></span>
+            </div>
         <div className="grid gap-6 mb-8 lg:grid-cols-4 sm:grid-cols-2">
 
         {
@@ -51,7 +54,7 @@ const Product = () => {
           
         </div>
         <div className="flex justify-center">
-        <Link to="/shop"><button class="btn btn-active btn-neutral">All Product</button></Link>
+        <Link to="/shop"><button class="btn btn-active bg-green-500 text-white hover:bg-green-700">All Product</button></Link>
         </div>
           
       </div>
