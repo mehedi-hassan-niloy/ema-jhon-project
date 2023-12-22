@@ -6,6 +6,8 @@ import ReviewItem from '../Review-Item/ReviewItem';
 import './Order.css'
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 import Footer from '../Header/Home/Footer/Footer';
+import {motion} from 'framer-motion'
+import { fadeIn } from '../../Variants';
 
 const Order = () => {
     const saveCart = useLoaderData();
@@ -21,8 +23,14 @@ const Order = () => {
     }
     return (
       <div>
-          <div className='grid gap-6  lg:grid-cols-2 sm:grid-cols'>
-            <div className='review-container'>
+          <div
+          className='grid gap-6  lg:grid-cols-2 sm:grid-cols'>
+            <motion.div
+            variants={fadeIn("right", 0.2)}
+            initial= "hidden"
+            whileInView={"show"}
+            viewport={{once: false, amount: 0.7}}
+            className='review-container'>
             {
                 cart.map(product =><ReviewItem
                 key={product.id}
@@ -30,8 +38,13 @@ const Order = () => {
                 handelRemoveFromCart={handelRemoveFromCart}
                 />)
             }
-            </div>
-            <div className='cart-container'>
+            </motion.div>
+            <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial= "hidden"
+            whileInView={"show"}
+            viewport={{once: false, amount: 0.7}}
+            className='cart-container'>
                 <Cart 
                 cart={cart}
                 handelClearCart={handelClearCart}
@@ -40,7 +53,7 @@ const Order = () => {
                         <button className='btn-proceed p-3 rounded bg-lime-500'>Proceed Checkout</button>
                     </Link>
                 </Cart>
-            </div>
+            </motion.div>
 
         </div>
         <Footer></Footer>

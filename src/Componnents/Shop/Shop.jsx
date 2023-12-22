@@ -6,6 +6,7 @@ import './Shop.css';
 import { Link } from 'react-router-dom';
 import Footer from '../Header/Home/Footer/Footer';
 
+
 const Shop = () => {
     const [products, setProducts] = useState([]);
 

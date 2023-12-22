@@ -18,7 +18,8 @@ const Work = () => {
         
         className='mt-10'>
             <div className='text-center mb-10'>
-                <h1 className='text-4xl text-bold'>How To Shop</h1>
+                <h1 className='text-4xl font-bold text-green-500 italic mb-3'>How T<span className='text-lime-500'>o Shop</span></h1>
+                <span className="w-48 h-1.5 bg-green-500 inline-block rounded-2xl mr-1.5"></span>
             </div>
             <div className='md:flex gap-12 justify-center'>
                 <Card className="md:w-[300px] transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">

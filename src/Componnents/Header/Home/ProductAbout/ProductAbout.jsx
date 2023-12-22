@@ -4,26 +4,27 @@ import img1 from '../../../../assets/product1.png'
 import img2 from '../../../../assets/productcap.png'
 import img3 from '../../../../assets/productbag.jpg'
 
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import { fadeIn } from '../../../../Variants';
+import { Link } from 'react-router-dom';
 
 const ProductAbout = () => {
 
     return (
-        <motion.div 
-        variants={fadeIn("up", 0.2)}
-        initial= "hidden"
-        whileInView={"show"}
-        viewport={{once: false, amount: 0.7}}
-        
-        className='mt-12 md:m-36'>
+        <motion.div
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+
+            className=' md:m-36'>
             <div className='grid gap-20 mb-8 md:grid-cols-2'>
                 <motion.div
-                variants={fadeIn("right", 0.2)}
-                initial= "hidden"
-                whileInView={"show"}
-                viewport={{once: false, amount: 0.7}}
-                className='flex'>
+                    variants={fadeIn("right", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.7 }}
+                    className='flex'>
                     <div>
                         <img className=' w-[500px] h-[250px]' src={img} alt="" />
                         <div className='flex'>
@@ -36,15 +37,15 @@ const ProductAbout = () => {
                 </motion.div>
 
                 <motion.div
-                variants={fadeIn("left", 0.2)}
-                initial= "hidden"
-                whileInView={"show"}
-                viewport={{once: false, amount: 0.7}}
+                    variants={fadeIn("left", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.7 }}
                 >
                     <div>
                         <h4 className='text-2xl text-extrabold text-green-500 tracking-widest'>THE PRODUCTS</h4>
-                            <h1 className='text-5xl text-extrabold text-black mt-2 mb-6 tracking-widest'>All About Ema-Jhon</h1>
-                            <span className="w-20 h-1.5 bg-green-500 inline-block rounded-2xl"></span>
+                        <h1 className='text-5xl text-extrabold text-lime-500 mt-2 mb-6 tracking-widest'>All About Ema-Jhon</h1>
+                        <span className="w-20 h-1.5 bg-green-500 inline-block rounded-2xl"></span>
                         <p className='mt-7 tracking-widest text-gray-500'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             to make a type specimen book.</p>
@@ -57,7 +58,11 @@ const ProductAbout = () => {
                             <li><span className='text-5xl text-green-500'>.</span> Bag</li>
                         </div>
                     </ul>
-                    <button className='btn bg-green-500 hover:bg-green-700 text-white'>Shop Now</button>
+                    <Link to="/shop"><div className="bg-white min-h-[200px] ">
+                        <button className="rounded px-6 py-2 font-medium bg-green-500 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+                            Shop Now
+                        </button>
+                    </div></Link>
                 </motion.div>
             </div>
 

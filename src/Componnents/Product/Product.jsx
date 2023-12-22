@@ -50,7 +50,7 @@ const Product = (props) => {
     return (
 
         <motion.div
-        variants={fadeIn("left", 0.2)}
+        variants={fadeIn("right", 0.2)}
         initial= "hidden"
         whileInView={"show"}
         viewport={{once: false, amount: 0.7}}
@@ -75,10 +75,10 @@ const Product = (props) => {
           alt="" 
           className='object-cover w-max h-max md:h-64 xl:h-80'
           />
-          <div className='absolute inset-0 flex flex-col px-6 py-4 text-gray-300 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100'>
+          <div className='absolute inset-0 flex flex-col px-6 py-4 text-white transition-opacity duration-200 bg-green-600 bg-opacity-75 opacity-0 hover:opacity-100'>
               <p>Name: {name}</p>
               <br />
-              <p>Seller Name: {seller}</p>
+              <p>Brand Name: {seller}</p>
               <br />
               <p className=''>Price:${price}</p>
               <br />
